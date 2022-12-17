@@ -6,21 +6,21 @@ void main() {
   runApp(MaterialApp(
     initialRoute: '/',
     routes: {
-      '/': (context) =>  HomeRoute(),
+      '/': (context) => HomeRoute(),
       '/first': (context) => const FirstRoute(),
       '/second': (context) => const SecondRoute(),
       '/third': (context) => const ThirdRoute(),
       '/fourth': (context) => const FourthRoute(),
-      '/fifth': (context) =>  FifthRoute(),
-      '/sixth': (context) =>  SixthRoute(),
+      '/fifth': (context) => FifthRoute(),
+      '/sixth': (context) => SixthRoute(),
     },
   )); //MaterialApp
 }
 
 class HomeRoute extends StatelessWidget {
-   HomeRoute({Key? key}) : super(key: key);
+  HomeRoute({Key? key}) : super(key: key);
 
-  final GlobalKey<FormState> _formKey =  GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -48,15 +48,15 @@ class HomeRoute extends StatelessWidget {
                       child: Column(
                         children: [
                           Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 35),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 35),
                               child: TextFormField(
                                 keyboardType: TextInputType.emailAddress,
                                 decoration: InputDecoration(
-                                  labelText: 'Email',
-                                  hintText: 'Enter email',
-                                  prefixIcon: Icon(Icons.email),
-                                  border: OutlineInputBorder()
-                                ),
+                                    labelText: 'Email',
+                                    hintText: 'Enter email',
+                                    prefixIcon: Icon(Icons.email),
+                                    border: OutlineInputBorder()),
                                 onChanged: (String value) {},
                                 validator: (value) {
                                   if (value!.isEmpty ||
@@ -67,7 +67,6 @@ class HomeRoute extends StatelessWidget {
                                     return null;
                                   }
                                 },
-
                               )),
                           SizedBox(height: 5.0),
                           Padding(
@@ -83,7 +82,7 @@ class HomeRoute extends StatelessWidget {
                                 ),
                                 onChanged: (String value) {},
                                 validator: (value) {
-                                  if(value == null || value.isEmpty)
+                                  if (value == null || value.isEmpty)
                                     return 'Password is required';
                                 },
                               )),
@@ -91,7 +90,8 @@ class HomeRoute extends StatelessWidget {
                           FloatingActionButton.extended(
                             label: Text('Login'), // <-- Text
                             backgroundColor: Color.fromARGB(255, 231, 128, 9),
-                            icon: Icon( // <-- Icon
+                            icon: Icon(
+                              // <-- Icon
                               Icons.logout,
                               size: 24.0,
                             ),
@@ -102,32 +102,31 @@ class HomeRoute extends StatelessWidget {
                               }
                             },
                           ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              textStyle: const TextStyle(fontSize: 18),
-                            ),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/fifth');
-                            },
-                            child: const Text('Sign Up'),
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  textStyle: const TextStyle(fontSize: 18),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/fifth');
+                                },
+                                child: const Text('Sign Up'),
+                              ),
+                              SizedBox(width: 20.0),
+                              TextButton(
+                                style: TextButton.styleFrom(
+                                  textStyle: const TextStyle(fontSize: 15),
+                                ),
+                                onPressed: () {
+                                  Navigator.pushNamed(context, '/sixth');
+                                },
+                                child: const Text('Forgot Password'),
+                              ),
+                            ],
                           ),
-                          SizedBox(width: 20.0),
-                          TextButton(
-                            style: TextButton.styleFrom(
-                              textStyle: const TextStyle(fontSize: 15),
-                            ),
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/sixth');
-                            },
-                            child: const Text('Forgot Password'),
-                          ),
-                          ],
-                      ),
-
                         ],
                       ),
                     ))
@@ -147,14 +146,14 @@ class FirstRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-      backgroundColor: Color.fromARGB(255, 252, 174, 6),
-      appBar: AppBar(
-        title: const Text('Curriculum Vitae'),
-        backgroundColor: Color.fromARGB(255, 255, 123, 0),
-      ), // AppBar
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: Column(
+        backgroundColor: Color.fromARGB(255, 252, 174, 6),
+        appBar: AppBar(
+          title: const Text('Curriculum Vitae'),
+          backgroundColor: Color.fromARGB(255, 255, 123, 0),
+        ), // AppBar
+        body: SingleChildScrollView(
+          child: SafeArea(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 CircleAvatar(
@@ -175,7 +174,7 @@ class FirstRoute extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'Montoya, Erika B.',
+                  'Parayno, Cyber Luz V.',
                   style: TextStyle(
                     fontFamily: 'Times New Roman',
                     fontSize: 30.0,
@@ -228,7 +227,7 @@ class FirstRoute extends StatelessWidget {
                       ),
                       SizedBox(height: 5.0),
                       Text(
-                        'montoyaerika0202@gmail.com',
+                        'cyberluzparayno8@gmail.com',
                         style: TextStyle(
                           fontFamily: 'Times New Roman',
                           color: Colors.black,
@@ -283,49 +282,50 @@ class FirstRoute extends StatelessWidget {
                       ),
                       SizedBox(height: 50.0),
                     ]),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 231, 170, 2), // background
-                  onPrimary: Colors.black, // foreground
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 231, 170, 2), // background
+                        onPrimary: Colors.black, // foreground
+                      ),
+                      child: const Icon(Icons.school),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/second');
+                      },
+                    ),
+                    SizedBox(width: 30.0), // ElevatedButton
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 231, 170, 2), // background
+                        onPrimary: Colors.black, // foreground
+                      ),
+                      child: const Icon(Icons.person),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/third');
+                      },
+                    ),
+                    SizedBox(width: 30.0), // ElevatedButton
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 230, 177, 6), // background
+                        onPrimary: Colors.black, // foreground
+                      ),
+                      child: const Icon(Icons.settings_rounded),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/fourth');
+                      },
+                    ),
+                  ],
                 ),
-                child: const Icon(Icons.school),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/second');
-                },
-              ),
-              SizedBox(width: 30.0),// ElevatedButton
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 231, 170, 2), // background
-                  onPrimary: Colors.black, // foreground
-                ),
-                child: const Icon(Icons.person),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/third');
-                },
-              ),
-              SizedBox(width: 30.0),// ElevatedButton
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  primary: Color.fromARGB(255, 230, 177, 6), // background
-                  onPrimary: Colors.black, // foreground
-                ),
-                child: const Icon(Icons.settings_rounded),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/fourth');
-                },
-              ),
-              ],
-          ),
-          SizedBox(width: 30.0),
+                SizedBox(width: 30.0),
                 FloatingActionButton.extended(
                   label: Text('Logout'), // <-- Text
                   backgroundColor: Color.fromARGB(255, 250, 205, 4),
-                  icon: Icon( // <-- Icon
+                  icon: Icon(
+                    // <-- Icon
                     Icons.logout,
                     size: 24.0,
                   ),
@@ -333,11 +333,11 @@ class FirstRoute extends StatelessWidget {
                     Navigator.pushNamed(context, '/');
                   },
                 ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
-    ),
     );
   }
 }
@@ -381,55 +381,54 @@ class SecondRoute extends StatelessWidget {
                 ),
               ),
             ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 35.0),
-          child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Philippine College of Science and Technology',
-              style: TextStyle(
-                fontFamily: 'Times New Roman',
-                color: Colors.black,
-                fontSize: 20.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Philippine College of Science and Technology',
+                    style: TextStyle(
+                      fontFamily: 'Times New Roman',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      letterSpacing: 2.5,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'Bachelor of Science in Information Technology',
+                    style: TextStyle(
+                      fontFamily: 'Times New Roman',
+                      color: Colors.black54,
+                      fontSize: 15.0,
+                      letterSpacing: 2.5,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
-            Text(
-              'Bachelor of Science in Information Technology',
-              style: TextStyle(
-                fontFamily: 'Times New Roman',
-                color: Colors.black54,
-                fontSize: 15.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Batch 2019-2023',
+                    style: TextStyle(
+                      fontFamily: 'Times New Roman',
+                      color: Colors.blueGrey[800],
+                      fontSize: 15.0,
+                      letterSpacing: 2.5,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
             ),
-          ],
-        ),
-      ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
-                'Batch 2019-2023',
-                style: TextStyle(
-                  fontFamily: 'Times New Roman',
-                  color: Colors.blueGrey[800],
-                  fontSize: 15.0,
-                  letterSpacing: 2.5,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-        ),
-
             Card(
               margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
               child: ListTile(
@@ -446,45 +445,44 @@ class SecondRoute extends StatelessWidget {
                 ),
               ),
             ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 35.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Bilarans National High School',
-                style: TextStyle(
-                  fontFamily: 'Times New Roman',
-                  color: Colors.black,
-                  fontSize: 20.0,
-                  letterSpacing: 2.5,
-                  fontWeight: FontWeight.bold,
-                ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Bilarans National High School',
+                    style: TextStyle(
+                      fontFamily: 'Times New Roman',
+                      color: Colors.black,
+                      fontSize: 20.0,
+                      letterSpacing: 2.5,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text(
-                'Batch 2011-2015',
-                style: TextStyle(
-                  fontFamily: 'Times New Roman',
-                  color: Colors.blueGrey[800],
-                  fontSize: 15.0,
-                  letterSpacing: 2.5,
-                  fontWeight: FontWeight.bold,
-                ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    'Batch 2011-2015',
+                    style: TextStyle(
+                      fontFamily: 'Times New Roman',
+                      color: Colors.blueGrey[800],
+                      fontSize: 15.0,
+                      letterSpacing: 2.5,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
               ),
-            ],
-          ),
-        ),
-
+            ),
             Card(
               margin: EdgeInsets.symmetric(vertical: 5.0, horizontal: 25.0),
               child: ListTile(
@@ -722,6 +720,7 @@ class ThirdRoute extends StatelessWidget {
     ); // Scaffold
   }
 }
+
 class FourthRoute extends StatelessWidget {
   const FourthRoute({Key? key}) : super(key: key);
 
@@ -850,6 +849,3 @@ class FourthRoute extends StatelessWidget {
     );
   }
 }
-
-
-
